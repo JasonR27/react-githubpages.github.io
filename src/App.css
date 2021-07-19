@@ -1,38 +1,62 @@
-.App {
+body {
+  display: grid;
+  justify-content: center;  
+  align-items: center;
+}
+
+#quotestand {
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 10px gray;
+  border-radius: 10px;
+}
+
+#QuotePage {
+  box-shadow: 5px 10px #999999;
+  text-align: center;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+#quotestand {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+#author {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#iconsButtonLine {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+#icons {
+  background-color: white;
+  color: #bc5a45;
+  margin: 10px;
+}
+
+#tw-icon,
+#tb-icon {
+  margin: 10px;
+}
+
+#sign {
   color: white;
+  margin: 0;
+  padding-top: 3rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+#RandomQuoteMachine {
+  width: 50%;
+  border: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
 }
