@@ -1,0 +1,51 @@
+#main {
+  background-color: lightgray;
+}
+h1 {
+  text-align: center;
+}
+p {
+  text-align: center;  
+  font-size: 17px;    
+}
+
+#img-div {
+  position: relative; 
+  background-color: white;  
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  width: 500px;
+  padding: 15px;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;  
+}
+
+container {
+  display: grid;    
+ }
+ul {
+  justify-self: center;
+  max-width: 500px;
+  display: grid;
+  grid-row-gap: 25px;        
+  list-style-position: inside;  
+}
+
+#prgph {
+  max-width: 500px;
+  margin: auto;
+} 

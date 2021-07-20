@@ -1,4 +1,289 @@
+/* Global Variables */
+
+* {
+  font-family: 'Share Tech', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 555;
+}
+
+/* Global Classes and ID's */
+
+html {
+  font-size: 60%;
+  box-sizing: border-box;
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  font-family: arial;
+  color: white; 
+}
+
 body {
-  background-color: black;
-  color: red;
+  display: grid;
+  justify-content: center;  
+  align-items: center;      
+}
+
+root {
+  display: grid;
+  justify-content: center;  
+  align-items: center;
+}
+
+#name {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+#Navbar {
+  height: 5rem;
+  font-size: 1.7rem;
+}
+
+#navbutton, #basic-nav-dropdown {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+#welcome-section {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #303030;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: -3rem;
+}
+
+#welcome-section h1 {
+  font-size: 6.15rem;
+}
+
+#welcome-section p {
+  color: #c94c4c;
+  font-size: 3.5rem;
+  font-style: italic;
+}
+
+#projectsstand {
+  height: 0rem;
+  background-color: #667292;
+}
+
+#arrowButtons { 
+  margin: 15px;
+  padding: 15px;     
+  background-color: transparent;
+  width: 9rem;  
+}
+
+.btnsR:hover {
+  transform: translateX(10px);
+}
+
+.btnsL:hover {
+  transform: translateX(-10px);
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;   
+  background-color: #667292;
+  height: 200vh;  
+  justify-content: center;
+  align-items: center;
+
+}
+
+#projects button i {    
+  
+}
+
+#titleProjectsButton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #667292;
+  height: 200vh;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+#titleProjecton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #667292;
+  height: 200vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#titleProjectsButton ul {
+  width: 90%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-gap: 5rem;
+  justify-items: center;
+}
+
+#titleProjectsButton li {
+  left: 0;
+}
+
+.project-tile {
+  width: 100%;
+  height: 80%;
+}
+
+#project_imgs {
+  width: 100%;
+  height: 85%;
+  border-radius: 3px;
+}
+
+.project-tile p {
+  width: inherit;
+  height: 15%;
+  font-size: 1.5rem;
+  background-color: gray;
+  margin-top: -2rem;
+  padding-top: -2rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#titleProjectsButton h3 {
+  font-size: 4rem;
+  color: white;
+  text-decoration: underline;    
+}
+
+#titleProjectsButton a {
+  height: inherit;
+  width: inherit;
+}
+
+.project-tile p:hover:before {
+  content: "< ";
+}
+
+.project-tile p:hover:after {
+  content: " />";
+}
+
+#contactInfoAndFooter {
+  height: 100vh;
+  background-color: green;
+}
+
+#Contact_Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #303030;
+  height: 85vh;
+  text-align: center;
+}
+
+#Contact_Info h4, #Contact_Info p {
+  color: gray;
+}
+
+#Contact_Info ul {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  max-width: 85rem;
+  font-size: 2.25rem;
+  flex-wrap: wrap;
+  margin: 5rem;
+}
+
+#Contact_Info a {
+  text-decoration: none;
+  color: white;
+}
+
+#Contact_Info h4 {
+  font-size: 4rem;
+  font-weight: 550;
+}
+
+#Contact_Info p {
+  font-size: 1.5rem;
+}
+
+#Contact_Info li:hover {
+  transform: translateY(10px);
+}
+
+footer {
+  display: flex;
+  height: 15vh;
+  background-color: #303030;
+  justify-content: space-around;
+  border-top: 5px solid #c94c4c;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 750px) {
+  footer {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* 1200px / 16px = 75em */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
 }

@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/gOwjymO",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/gOwjymO.default.png",
+      "name": "JavaScript Calculator"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/gOwjymO",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/gOwjymO.default.png",
+      "name": "Drum Machine"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/gOwjymO",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/gOwjymO.default.png",
+      "name": "Random Quote Machine"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/gOwjymO",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/gOwjymO.default.png",
+      "name": "Markdown Previewer"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/RwGYdPZ",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/RwGYdPZ.default.png",
+      "name": "Landing Page"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/vYXzGdy",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/vYXzGdy.default.png",
+      "name": "Survey Page"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/PoGxgdL",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/PoGxgdL.default.png",
+      "name": "Technical Documentation Page"
+    },
+    {
+      "projectclass": "project-tile",
+      "link": "https://codepen.io/jasonr27/debug/gOwjymO",
+      "imglink": "https://assets.codepen.io/3857943/internal/screenshots/pens/gOwjymO.default.png",
+      "name": "Tribute Page"
+    }
+  ]
+}

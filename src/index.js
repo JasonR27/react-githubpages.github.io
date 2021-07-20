@@ -1,6 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import AppWrapper from "./App"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import AppRouter from './router/AppRouter';
+import Portfolio from './App'
 
-ReactDOM.render(<AppWrapper />, document.getElementById("root"));
+//import { composeWithDevTools } from 'redux-devtools-extension'
+
+// React:
+
+ReactDOM.render(<Portfolio />, document.getElementById('root'));
 

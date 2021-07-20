@@ -1,0 +1,92 @@
+body {  
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), url(https://ak3.picdn.net/shutterstock/videos/657124/thumb/1.jpg); 
+  background-size: 100%;    
+  color: white; 
+  background-attachment: fixed;
+  font-family: Sans-serif, Arial, Helvetica;  
+}
+
+#title {
+  text-align: center;  
+}
+
+#description {
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+label {
+  font-size: 20px;
+  text-indent: 100px;
+}
+
+#main {
+  display: grid;  
+}
+
+#survey-form {
+  border-radius: 5px;  
+  display: grid;
+  background-color: rgba(100, 100, 168, 0.0); ;
+  background-opacity: 0.;
+  margin:auto;
+  max-width: 700px;
+  grid-gap: 10px;
+  font-size: 20px;
+  font-family: Sans-serif, Arial, Helvetica;  
+ }
+
+.labels {
+ text-indent: 85px;
+}
+
+button {
+  max-width: 90%;
+  margin: auto;
+  justify-self: center;
+}
+
+
+#submit {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div {
+  margin: auto;
+  border-radius: 10px;
+  width:775px;
+  max-width: 850px; 
+  background-color: rgba(100, 100, 168, 0.50); 
+  background-opacity: 0.5;
+  
+}
+
+input[type=text], [type=email], [type=number], select {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=radio], [type=checkbox] {
+  height: 20px;
+  width: 20px;  
+} 
+
+container {
+  display: grid;
+}
+
+
+
