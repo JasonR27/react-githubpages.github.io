@@ -90,7 +90,7 @@ function Portfolio() {
     <Router>
       <Helmet>
         <link rel="stylesheet" href="App.module.css" />
-      </Helmet>
+      </Helmet>      
       <Provider store={store} exact route="/">
         <div className="App">
           <NavBar />

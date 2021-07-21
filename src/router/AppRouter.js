@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { PrtflAppWrapper } from '../App'
-//import { RQMAppWrapper } from '../pages/RandomQuoteMachine'
+import { RQMAppWrapper } from '../pages/RandomQuoteMachine'
 //import { JSCalcAppWrapper } from '../pages/JavascriptCalculator'
 //import { DMAppWrapper } from '../pages/DrumMachine'
 //import { SPAppWrapper } from '../pages/SurveyPage'

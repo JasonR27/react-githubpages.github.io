@@ -1,49 +1,51 @@
-body {
+#RQMAppWrapper body {
   display: grid;
   justify-content: center;  
   align-items: center;  
 }
 
-#quotestand {
-  text-align: center;
-  background-color: white;
-  box-shadow: 5px 10px gray;
-  border-radius: 10px;
-}
 
-#QuotePage {
+
+#RQMAppWrapper #QuotePage {
   box-shadow: 5px 10px #999999;
   text-align: center;
   max-width: 500px;
   border-radius: 10px;
 }
 
-#quotestand {
+#RQMAppWrapper #quotestand {
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 10px gray;
+  border-radius: 10px;
+}
+
+#RQMAppWrapper > #quotestand {
   max-width: 500px;
   border-radius: 10px;
 }
 
-#author {
+#RQMAppWrapper > #author {
   text-align: center;
 }
 
-#iconsButtonLine {
+#RQMAppWrapper > #iconsButtonLine {
   display: flex;
   justify-content: space-between;
 }
 
-#icons {
+#RQMAppWrapper > #icons {
   background-color: white;
   color: #bc5a45;
   margin: 10px;
 }
 
-#tw-icon,
+#RQMAppWrapper > #tw-icon
 #tb-icon {
   margin: 10px;
 }
 
-#sign {
+#RQMAppWrapper > #sign {
   color: white;
   margin: 0;
   padding-top: 3rem;
@@ -55,7 +57,7 @@ body {
   border: 2px solid black;
 }
 
-button {
+#RQMAppWrapper > button {
   border-radius: 5px;
   margin: 10px;
   padding: 5px;

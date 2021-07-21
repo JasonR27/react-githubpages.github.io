@@ -8,7 +8,7 @@ class RandomQuoteMachine extends React.Component {
     this.state = {
       text: "",
       author: "",
-      data: []
+       data: []
     };
     this.handleClick = this.handleClick.bind(this);
   }
