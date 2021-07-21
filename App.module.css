@@ -1,15 +1,11 @@
-.portfolioPage {  
+/* Global Variables */
+
+* {
   font-family: 'Share Tech', sans-serif;
   margin: 0;
   padding: 0;
   color: white;
-  box-sizing: border-box;  
-  font-size: 60%;  
-  background-color: gray;  
-  position: relative;
-  flex-direction: column;  
-  font-family: arial;
-  color: white; 
+  box-sizing: border-box;
 }
 
 li {
@@ -24,7 +20,20 @@ a {
 
 /* Global Classes and ID's */
 
-Portfolio body {
+html {
+  font-size: 60%;
+  box-sizing: border-box;
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  font-family: arial;
+  color: white; 
+}
+
+body {
   display: grid;
   justify-content: center;  
   align-items: center;      
@@ -101,10 +110,6 @@ root {
   justify-content: center;
   align-items: center;
 
-}
-
-#projects button i {    
-  
 }
 
 #titleProjectsButton {
