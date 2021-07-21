@@ -1,0 +1,64 @@
+#RQMAppWrapper body {
+  display: grid;
+  justify-content: center;  
+  align-items: center;  
+}
+
+
+
+#RQMAppWrapper #QuotePage {
+  box-shadow: 5px 10px #999999;
+  text-align: center;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+#RQMAppWrapper #quotestand {
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 10px gray;
+  border-radius: 10px;
+}
+
+#RQMAppWrapper > #quotestand {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+#RQMAppWrapper > #author {
+  text-align: center;
+}
+
+#RQMAppWrapper > #iconsButtonLine {
+  display: flex;
+  justify-content: space-between;
+}
+
+#RQMAppWrapper > #icons {
+  background-color: white;
+  color: #bc5a45;
+  margin: 10px;
+}
+
+#RQMAppWrapper > #tw-icon
+#tb-icon {
+  margin: 10px;
+}
+
+#RQMAppWrapper > #sign {
+  color: white;
+  margin: 0;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+#RandomQuoteMachine {
+  width: 50%;
+  border: 2px solid black;
+}
+
+#RQMAppWrapper > button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+}
