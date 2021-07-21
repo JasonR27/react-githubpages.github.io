@@ -1,5 +1,6 @@
 import React from 'react'
-import '../pagesstyles/DrumMachine.css'
+//import styles from '../pagesstyles/DrumMachine.module.css'
+import Helmet from 'react-helmet'
 
 const soundsOne = [
   {
@@ -117,7 +118,7 @@ const soundsTwo = [
 
 export function DrumMachine() {
 
- //Initializing state using Hooks
+  //Initializing state using Hooks
   const [bank, setBank] = React.useState(soundsTwo);
   const [notes, setNotes] = React.useState("Notes for user");
   const [on, setOn] = React.useState(false)
@@ -132,17 +133,16 @@ export function DrumMachine() {
         setOn(true);
         setNotes("On");
       }
-
     }
     console.log(on)
   }
 
-    // Handler for changing Banks button
+  // Handler for changing Banks button
   const changeBanks = () => {
     if (on === true) {
       if (bank === soundsOne) {
         setBank(soundsTwo);
-        setNotes("Smooth Piano")        
+        setNotes("Smooth Piano")
         console.log(bank[1].id);
       } else {
         if (bank === soundsTwo) {
@@ -156,13 +156,16 @@ export function DrumMachine() {
 
   return (
     <div id="drum-machine" className="container pt-5" >
+      <Helmet>
+        <link rel="stylesheet" href='../pagesstyles/SurveyPage.module.css' />
+      </Helmet>
       <div id="display" className="text-center">
         <h2>Drum Machine</h2>
         <SoundButtons
           on={on}
           setNotes={setNotes}
           Bank={bank}
-          Power={Power}          
+          Power={Power}
         />
         <ChangingSounds id="ChangingSounds"
           Power={Power}
@@ -181,20 +184,20 @@ function SoundButtons(props) {
     <div>
       {props.Bank.map((tone) => (
         <SoundButton
-          
+
           on={props.on}
           setNotes={props.setNotes}
           id="soundButton"
           key={tone.id}
           tone={tone}
-          Power={props.Power}          
+          Power={props.Power}
         />
       ))}
     </div>
   )
 }
 
-function SoundButton(props) {      
+function SoundButton(props) {
   React.useEffect(() => {
     document.addEventListener
       ("keydown", handleKeyPress);
@@ -204,12 +207,12 @@ function SoundButton(props) {
     };
   }, [props.on]);
 
-  const handleKeyPress = (e) => {    
-      if (e.keyCode === props.tone.keyCode) {
-        playSound();        
-      } 
+  const handleKeyPress = (e) => {
+    if (e.keyCode === props.tone.keyCode) {
+      playSound();
+    }
   };
-  
+
   const playSound = () => {
     if (props.on === true) {
       const audioTag = document.getElementById(props.tone.keyTrigger);
@@ -217,22 +220,22 @@ function SoundButton(props) {
       audioTag.play();
       props.setNotes(props.tone.id);
       console.log(props.tone.id)
-    } else { 
-      props.setNotes("Off") 
-    console.log("props.on: "+props.on)
+    } else {
+      props.setNotes("Off")
+      console.log("props.on: " + props.on)
     }
   }
 
   return (
-    <button      
+    <button
       id="audio"
       className="drum-pad lm-2 p-3"
       onClick={playSound}
     >
-      <audio        
-        className="clip"        
+      <audio
+        className="clip"
         id={props.tone.keyTrigger}
-        src={props.tone.url}        
+        src={props.tone.url}
       />
       {props.tone.keyTrigger}
     </button>
@@ -262,4 +265,16 @@ function ChangingSounds(props) {
   )
 }
 
-export default DrumMachine;
+export class DMAppWrapper extends React.Component {
+  render() {
+    return (
+      <section id="DMAppWrapper" >
+        <DrumMachine  />
+      </section>
+    );
+  }
+}
+
+// className={styles}
+
+export default DMAppWrapper;

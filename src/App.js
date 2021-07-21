@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+//import styles from './App.module.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { createStore } from 'redux'
@@ -11,6 +11,9 @@ import ContactInfoAndFooter from './components/ContactInfoAndFooter'
 import ProjectPage1 from './components/ProjectPage1'
 import ProjectPage2 from './components/ProjectPage2'
 import ProjectPage3 from './components/ProjectPage3'
+import Helmet from 'react-helmet'
+
+
 //Redux:
 
 const RC = "RC";
@@ -33,9 +36,9 @@ const leftClick = () => {
 };
 
 const compChngReducer = (state, action) => {
-  
+
   switch (action.type) {
-  
+
     case RC:
       console.log("case RC");
       if (action.current >= action.array.length - 1) {
@@ -44,7 +47,7 @@ const compChngReducer = (state, action) => {
         return { ...state, current: action.current + 1 };
       }
 
-    case LC:      
+    case LC:
       if (action.current <= 0) {
         return { ...state, current: action.array.length - 1 };
       } else {
@@ -81,73 +84,84 @@ const mapDispatchToProps = (dispatch) => {
 
 // React:
 
-export function Portfolio() {  
+function Portfolio() {
 
   return (
-    <Router>            
+    <Router>
+      <Helmet>
+        <link rel="stylesheet" href="App.module.css" />
+      </Helmet>
       <Provider store={store} exact route="/">
-      <div className="App">
-        <NavBar />
-        <WelcomeSection />
-        <div id="projectsstand"></div>                
-        <ProjectsStand />              
-        <ContactInfoAndFooter />
-      </div >
-      </Provider>      
-    </Router>    
+        <div className="App">
+          <NavBar />
+          <WelcomeSection />
+          <div id="projectsstand"></div>
+          <ProjectsStand />
+          <ContactInfoAndFooter />
+        </div >
+      </Provider>
+    </Router>
   );
 }
 
 
 const ProjectsPages = (props) => {
-  
-    const handleRightClick = () => {
-      console.log(store.getState());
-      props.rigthClickR();
-      console.log(store.getState());
-    };
-  
-    const handleLeftClick = () => {
-      console.log(store.getState());
-      props.leftClickR();
-      console.log(store.getState());
+
+  const handleRightClick = () => {
+    console.log(store.getState());
+    props.rigthClickR();
+    console.log(store.getState());
   };
-  
-    switch (store.getState().array[store.getState().current]) {
-      case "a":
-        return (
-          <ProjectPage2
-            handleLeftClick={handleLeftClick}
-            handleRightClick={handleRightClick}
-          />
-        );
-      case "b":
-        return (
-          <ProjectPage1
-            handleLeftClick={handleLeftClick}
-            handleRightClick={handleRightClick}
-          />
-        );
-      case "c":
-        return (
-          <ProjectPage3
-            handleLeftClick={handleLeftClick}
-            handleRightClick={handleRightClick}
-          />
-        );
-      default:
-        return (
-          <ProjectPage1
-            handleLeftClick={handleLeftClick}
-            handleRightClick={handleRightClick}
-          />
-        );
-    }
+
+  const handleLeftClick = () => {
+    console.log(store.getState());
+    props.leftClickR();
+    console.log(store.getState());
+  };
+
+  switch (store.getState().array[store.getState().current]) {
+    case "a":
+      return (
+        <ProjectPage2
+          handleLeftClick={handleLeftClick}
+          handleRightClick={handleRightClick}
+        />
+      );
+    case "b":
+      return (
+        <ProjectPage1
+          handleLeftClick={handleLeftClick}
+          handleRightClick={handleRightClick}
+        />
+      );
+    case "c":
+      return (
+        <ProjectPage3
+          handleLeftClick={handleLeftClick}
+          handleRightClick={handleRightClick}
+        />
+      );
+    default:
+      return (
+        <ProjectPage1
+          handleLeftClick={handleLeftClick}
+          handleRightClick={handleRightClick}
+        />
+      );
   }
+}
 
 const ProjectsStand = connect(mapStateToProps, mapDispatchToProps)(ProjectsPages);
 
-export default Portfolio;
+export const PrtflAppWrapper = () => {
+  return (
+    <section id="PrtflAppWrapper" >
+      <Portfolio />
+    </section>
+  );
+}
+
+export default PrtflAppWrapper;
 
 {/* 
   

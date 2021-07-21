@@ -1,9 +1,13 @@
 import React from 'react'
-import '../pagesstyles/LandingPage.css'
+//import styles from '../pagesstyles/LandingPage.css'
+import Helmet from 'react-helmet'
 
 export const LandingPage = () => {
     return (
         <div id="main">
+            <Helmet>
+                <link rel="stylesheet" href='../src/pagesstyles/LandingPage.module.css' />
+            </Helmet>
 
             <header id="header">
 
@@ -109,12 +113,20 @@ export const LandingPage = () => {
                     <li id="fli"><a href="#main">Contact</a></li>
                 </ul>
                 <span id="CRtps">Copyright 2016, Original Trombones</span>
-            </footer>    
-    </div >
-    )   
+            </footer>
+        </div >
+    )
 }
 
-export default LandingPage;
+export const LPAppWrapper = () => {
+    return (
+        <section id="RQMAppWrapper" >
+            <LandingPage />
+        </section>
+    );
+}
+
+export default LPAppWrapper;
 
 
 

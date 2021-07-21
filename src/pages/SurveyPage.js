@@ -1,10 +1,14 @@
 import React from 'react'
-import '../pagesstyles/SurveyPage.css'
+//import styles from '../pagesstyles/SurveyPage.module.css'
+import Helmet from 'react-helmet'
 
 export const SurveyPage = () => {
     return (
 
         <section id="main">
+            <Helmet>
+                <link rel="stylesheet" href='../pagesstyles/SurveyPage.module.css' />
+            </Helmet>
             <header>
                 <h1 id="title">freeCodeCamp Survey Form</h1>
                 <p id="description">Thank you for taking the time to help us improve</p>
@@ -64,9 +68,16 @@ export const SurveyPage = () => {
                 </form>
             </div>
         </section>
-
     )
 }
 
-export default SurveyPage;
+export const SPAppWrapper = () => {
+    return (
+        <section id="SPAppWrapper" >
+            <SurveyPage />
+        </section>
+    );
+}
+
+export default SPAppWrapper;
 

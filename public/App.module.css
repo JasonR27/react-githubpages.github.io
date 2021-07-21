@@ -112,10 +112,6 @@ root {
 
 }
 
-#projects button i {    
-  
-}
-
 #titleProjectsButton {
   display: flex;
   flex-direction: row;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 import AppRouter from './router/AppRouter';
 import Portfolio from './App'
 
@@ -8,5 +8,5 @@ import Portfolio from './App'
 
 // React:
 
-ReactDOM.render(<Portfolio />, document.getElementById('root'));
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
 

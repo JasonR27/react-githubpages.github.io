@@ -1,7 +1,7 @@
 import React from 'react'
 import { sum, divide, subtract, multiply } from 'mathjs'
-import '../pagesstyles/JavascriptCalculator.css'
-
+//import styles from '../pagesstyles/JavascriptCalculator.css'
+import Helmet from 'react-helmet'
 
 export function JSCalc() {
 
@@ -29,6 +29,9 @@ export function JSCalc() {
 
     return (
         <div id="container0">
+            <Helmet>
+                <link rel="stylesheet" href='../src/pagesstyles/SurveyPage.module.css' />
+            </Helmet>
             <div id="pageData">JavaScript Calculator</div>
             <div id="calculatorContainer">
                 <div id="display">{result}</div>
@@ -511,5 +514,16 @@ const BuClick = (props) => {
         </button>
     );
 };
+
+
+export class JSCalcAppWrapper extends React.Component {
+    render() {
+      return (
+<section id="JSCalc" >
+          <JSCalc  />
+        </section>
+      );
+    }
+  }
 
 export default JSCalc;
